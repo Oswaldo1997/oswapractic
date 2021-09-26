@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registro de Estudiante</title>
+<link rel="stylesheet" type="text/css" href="Stylos.css"/>
+<script language="javascript" type="text/javascript" src="funciones.js"></script>
+
+</head>
+
+<body  background="imagenes/1.jpeg" text="#FFFFFF">
+<form name="frmdatos" action="registroestudiante_recepcion.html" method="get" onsubmit=" return validar(frmdatos)">
+<form action="registroestudiante_recepcion.html" method="get" enctype="multipart/form-data">
+<font face="Tahoma, Geneva, sans-serif" size="+1">
+<table width="1000" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr >
+	<td colspan="3" align="center" valign="bottom" class="titulo1"><b>REGISTRO DE ESTUDIANTES</b></td>
+    <td colspan="2"   lign="center"><img src="imagenes/images.png" width="120" />
+    <input type="file" name="foto"/ accept="image/*" id="caja1">
+    </td>
+</tr>
+<tr>
+	<td colspan="5">
+    <hr/>
+   <p align="justify"> <b> <font size="+1">INTRUCCIONES:</font></b> lea cuidadosamente y llene los espacios correspondientes. Toda la información proporcionada será <font size="+1"><b>ESTRICTAMENTE CONFIDENCIAL.</b></font></p> <hr/>
+    </td>
+    </tr>
+<tr >
+	<td colspan="5">
+    <fieldset>
+    <legend class="titulo2"><b> I. DATO DE IDENTIFICACION</b></legend>
+    <p align="left" ><span class="campo1">Nombre:</span> <input type="text" name="nombre"  size="20" placeholder="nombre" required="required"="required" autofocus="autofocus" tabindex="1"/ id="caja1">
+    <span class="campo1">Apellido Paterno:</span><input type="text" name="apellidopaterno" size="20" placeholder="apellidopat" required="required" tabindex="2" id="caja1" />
+    <span class="campo1">Apellido Materno:</span><input type="text" name="apellidomat" size="20" placeholder="apellidomat" required="required" tabindex="3" id="caja1" /> 
+    </p>
+    <p align="center"><font size="+1"><span class="campo1">Numero de Control:</span></font>
+    <input type="text" name="txtnumerocontrol" size="10" placeholder="numerocontrol" required="required" tabindex="4" id="caja1"/>
+    </p> 
+    <p align="center">
+   <span class="campo1">Fecha de Nacimiento:</span><input type="date" name="fechanac" required="required" tabindex="5" id="caja1"/>
+    <span class="campo1">Sexo:</span>
+    <input type="radio" name="sexo"  value="1" required="required" tabindex="6"/ id="ophombre"> 
+    <label for="ophombre">Hombre</label> 
+    
+     <input type="radio" name="sexo"  value="1" required="required" tabindex="6"/ id="opmujer"> 
+    <label for="opmujer">Mujer</label> 
+    
+    </p>
+    <P align="center">
+    <font size="+1"><span class="campo1">Telefono:</span></font><input type="text" name="Telefono" size="20" placeholder="Numero de Telefono" required="required" id="caja1"/>
+   <span class="campo1">Estado Civil:</span>
+    <select name="estadocivil" id="caja1">
+    <option value="1">Casado(a)</option>
+    <option value="2">Soltero(a)</option>
+    <option value="3">Divorciado(a)</option>
+    <option value="4">Viudo(a)</option>
+    <option value="5">Libre</option>
+    </select>
+    </p>
+    <p align="center">
+  <span class="campo1">Carrera:</span>
+    <select name="carrera" id="caja1">
+    <option value="1">Ingeniería en Sistemas Computacionales</option>
+    <option value="2">Ingeniería en Agronomia</option>
+    <option value="3">Licenciatura en Biología</option>
+    <option value="4">Ineniería en Gestión Empresarial</option>
+    </select>
+     </p>
+     <p align="center">
+     <span class="campo1">Status:</span>
+    <select name="Status" id="caja1">
+    <option value="1">Inscrito</option>
+    <option value="2">No Inscrito</option>
+    <option value="3">Baja</option>
+    <option value="4">Egresado</option>
+    </select>
+    </p>
+    </fieldset> 
+    </td>
+    </tr>
+<tr>
+	<td colspan="5" valign="bottom" align="center">
+    <fieldset>
+       <legend class="titulo2"><b>II.DATOS DE LOCALIZACIÓN</b></legend>
+       <p>  <span class="campo1">Dirección:</span></p>
+       <textarea name="dirección " id="caja1" rows="3" cols="50" placeholder="direccion" required="required"></textarea>
+        <p><span class="campo1">correo</span></p>
+        <input type="email" name="correo" size="50" required="required" placeholder="example@gmail.com" id="caja1"/>     
+    </fieldset>
+    </td>
+    </tr>
+<tr>
+	<td width="200">&nbsp;</td>
+    <td width="200">&nbsp;</td>
+    <td width="200">&nbsp;</td>
+    <td width="200">&nbsp;</td>
+    <td width="200">&nbsp;</td>
+</tr>
+
+  <td colspan="5" align="center">
+  <button type="reset" id="boton1">
+  <img src="imagenes/images (2).jpeg" width="35" />
+  Limpiar Registro
+  </button>
+  <button type="button" onclick="alert('botones de un furmulario');" id="boton1">
+  <img src="imagenes/images (3).jpeg" width="35" />
+  Mensaje
+  </button>
+  <button type="submit" name="registrar" value="registrar" onclick="validar(txtnumerocontrol)" id="boton1">
+  <img src="imagenes/images (1).jpeg" width="35" />
+  Registar 
+  </button>
+  <a href="index.html" target="_blank">REGRESAR</a>
+   </td>
+  </tr>
+</table>
+</font>
+</form>
+</body>
+</html>
